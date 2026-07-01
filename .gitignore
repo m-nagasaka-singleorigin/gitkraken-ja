@@ -1,6 +1,9 @@
 ja.md
 tmp/
 
+# Claude Code local settings (contains absolute paths)
+.claude/settings.local.json
+
 # Mac
 .DS_Store
 
