@@ -15,7 +15,7 @@ ja/v12.2.1/strings.json   # 日本語訳
 
 ## Change Language
 
-**言語の切り替えは自己責任でお願いします。言語の切り替えによって[不具合](https://github.com/megos/gitkraken-i18n/issues?q=is%3Aissue+is%3Aopen+label%3A%22known+issue%22)が発生することが報告されています。**
+**言語の切り替えは自己責任でお願いします。言語の切り替えによって不具合が発生することが報告されています。**
 
 1. このリポジトリの`ja/{バージョン}/strings.json`を、以下の`strings.json`と置き換える
    - Windows: `%LOCALAPPDATA%\gitkraken\app-x.x.x\resources\app.asar.unpacked\src\strings.json`（x.x.xは任意のバージョン）

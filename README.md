@@ -17,7 +17,7 @@ ja/v12.2.1/strings.json   # Japanese translation
 
 ## Change Language
 
-**Please do this at your own risk! Please see [Known issues](https://github.com/megos/gitkraken-i18n/issues?q=is%3Aissue+is%3Aopen+label%3A%22known+issue%22).**
+**Please do this at your own risk! Changing the language may cause issues in GitKraken.**
 
 1. Replace GitKraken's `strings.json` with `ja/{version}/strings.json` from this repository.
    - Windows: `%LOCALAPPDATA%\gitkraken\app-x.x.x\resources\app.asar.unpacked\src\strings.json` (x.x.x is version)
