@@ -1,4 +1,4 @@
-# gitkraken-i18n
+# gitkraken-ja
 
 GitKraken Desktop の日本語翻訳リポジトリ。英語ファイル (`en/`) を正として、日本語ファイル (`ja/`) を管理する。
 
