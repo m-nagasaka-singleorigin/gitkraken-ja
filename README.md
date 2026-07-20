@@ -6,11 +6,20 @@ This repository is a fork of https://github.com/megos/gitkraken-i18n/tree/main.
 ## Contents
 - [Japanese](README-ja.md)
 
+## Structure
+
+Translations are kept per GitKraken version:
+
+```
+en/v12.2.1/strings.json   # original English strings
+ja/v12.2.1/strings.json   # Japanese translation
+```
+
 ## Change Language
 
 **Please do this at your own risk! Please see [Known issues](https://github.com/megos/gitkraken-i18n/issues?q=is%3Aissue+is%3Aopen+label%3A%22known+issue%22).**
 
-1. Replace project dir `strings.json` to GitKraken's `strings.json`.
+1. Replace GitKraken's `strings.json` with `ja/{version}/strings.json` from this repository.
    - Windows: `%LOCALAPPDATA%\gitkraken\app-x.x.x\resources\app.asar.unpacked\src\strings.json` (x.x.x is version)
    - Mac: `/Applications/GitKraken.app/Contents/Resources/app.asar.unpacked/src/strings.json`
 1. Restart GitKraken.
@@ -21,22 +30,10 @@ This repository is a fork of https://github.com/megos/gitkraken-i18n/tree/main.
 
 ## Translate
 
-1. Copy `strings.json` to `{locale}/strings.json`. (`{locale}` is the locale to translate)
-1. Translate `{locale}/strings.json`.
-1. Check translate [Change Language](#Change%20Language) for reference.
+Translation is done with [Claude Code](https://claude.com/claude-code). No build tooling or dependencies are required.
 
-## Updating Japanese Strings
+1. Copy the new version's `strings.json` from GitKraken into `en/{version}/strings.json`.
+1. Run the `/project:new-version` slash command to generate `ja/{version}/strings.json`.
+1. Verify the result by switching the language, see [Change Language](#change-language).
 
-To update `ja/strings.json` from a newer GitKraken `en/strings.json`, sync the key order and generate small translation task files:
-
-```sh
-npm run sync:ja
-```
-
-Translate `tmp/translation-tasks/001.json`, then apply it back to `ja/strings.json`:
-
-```sh
-npm run apply:ja -- tmp/translation-tasks/001.json
-```
-
-Repeat this for the remaining task files. See [TRANSLATING-ja.md](TRANSLATING-ja.md) for the full Japanese workflow.
+Translation rules and the full workflow are documented in [CLAUDE.md](CLAUDE.md).
